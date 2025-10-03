@@ -38,7 +38,30 @@ posts.sort(
 
   <section id="hero" class="bg-orange-50 px-0">
     <div class="mx-auto grid grid-cols-2 items-stretch gap-0">
-      <!-- left: text block on light card -->
+
+
+            <!-- bottom: edge-to-edge image -->
+      <div class="relative md:col-span-1 col-span-2">
+        <!-- <Picture
+          src={heroImg}
+          alt="lady in a stone massage"
+          formats={['avif', 'webp']}
+          pictureAttributes={{
+            class:
+              'block aspect-video w-full object-cover lg:h-full lg:min-h-[770px]',
+          }}
+          loading="eager"
+        /> -->
+
+        <Image
+          loading={'eager'}
+          src={heroImg}
+          class="block aspect-video w-full object-cover h-full lg:min-h-[550px]"
+          alt="lady in a stone massage"
+        />
+      </div>
+
+            <!-- top: text block on light card -->
       <div
         class="relative flex items-center justify-center px-6 py-12 col-span-2 md:col-span-1"
       >
@@ -77,27 +100,6 @@ posts.sort(
             </div>
           </div>
         </div>
-      </div>
-
-            <!-- right: edge-to-edge image -->
-      <div class="relative md:col-span-1 col-span-2">
-        <!-- <Picture
-          src={heroImg}
-          alt="lady in a stone massage"
-          formats={['avif', 'webp']}
-          pictureAttributes={{
-            class:
-              'block aspect-video w-full object-cover lg:h-full lg:min-h-[770px]',
-          }}
-          loading="eager"
-        /> -->
-
-        <Image
-          loading={'eager'}
-          src={heroImg}
-          class="block aspect-video w-full object-cover h-full lg:min-h-[550px]"
-          alt="lady in a stone massage"
-        />
       </div>
     </div>
 
