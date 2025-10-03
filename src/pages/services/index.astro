@@ -259,142 +259,408 @@ const mapNote =
     </div>
   </section>
 
-  <section class="bg-orange-100">
-    <div class="mx-auto max-w-6xl px-6 py-16 md:py-20">
-      <header class="text-center">
-        <h2 class="font-serif text-3xl md:text-4xl text-gray-900">
-          Service Benefits
-        </h2>
-      </header>
+  <!-- ============================================ -->
+  <!--            Services Benefits                 -->
+  <!-- ============================================ -->
 
-      <div
-        class="mt-12 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-12"
-      >
-        {
-          benefits.map((b) => (
-            <div class="text-center">
-              <div
-                class="mx-auto mb-6 flex size-25 items-center justify-center rounded-full bg-orange-200 text-2xl text-emerald-800"
-                aria-hidden="true"
-              >
-                {/* {b.icon} */}
-                <Image src={b.icon} alt={b.title} class={'drop-shadow-lg '} />
-              </div>
-              <h3 class="font-semibold text-emerald-900">{b.title}</h3>
-              <p class="mt-3 text-sm text-gray-700 leading-6">{b.body}</p>
-            </div>
-          ))
-        }
-      </div>
-
-      <div class="mt-12 text-center">
-        <p class="text-gray-800">
-          Ready to experience therapeutic care—tailored to your goals?
-        </p>
-        <div
-          class="mt-4 flex flex-col items-center gap-3 sm:flex-row sm:justify-center"
-        >
-          <a
-            href="/booking"
-            class="inline-flex items-center rounded-full bg-emerald-200 px-6 py-3 text-sm font-semibold text-emerald-950 transition-colors hover:bg-emerald-300 hover:text-emerald-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400"
-          >
-            Book an Appointment
-          </a>
-          <a
-            href="/contact"
-            class="inline-flex items-center rounded-full border-2 border-emerald-900 px-6 py-3 text-sm font-semibold text-emerald-900 transition-colors hover:bg-emerald-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400"
-          >
-            Ask a Question
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="bg-orange-50">
-    <div class="mx-auto max-w-[120rem] flex flex-col md:flex-row">
-      <!-- Left image -->
-      <div class="relative">
-        <Image
+  <section id="services-1666">
+    <div class="cs-container">
+      <div class="cs-image-group">
+        <Picture
+          pictureAttributes={{ class: 'cs-picture' }}
           src={benefitImg}
-          alt="Therapeutic massage providing relief and relaxation"
-          class="object-cover aspect-video h-full"
+          formats={['avif', 'webp']}
+          alt="benefit massage"
         />
-        <div
-          class="pointer-events-none absolute left-6 top-6 hidden max-w-[24ch] text-white drop-shadow-md lg:block"
-        >
-          <h2
-            class="font-serif drop-shadow-md text-4xl/[1.1] md:text-5xl/[1.1]"
-          >
-            Who Can
-            <br />
-            Benefit?
-          </h2>
-        </div>
+
+        <!--SVG Graphic-->
+        <img
+          class="cs-floater"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/white-swirl.svg"
+          alt="graphic"
+          loading="lazy"
+          decoding="async"
+          height="710"
+          aria-hidden="true"
+          width="690"
+        />
       </div>
-
-      <!-- Right content -->
-      <div class="bg-orange-50 px-6 py-12 md:px-10">
-        <h2 class="font-serif text-3xl md:text-4xl text-gray-900 lg:hidden">
-          Who Can Benefit?
-        </h2>
-
-        <ul class="mt-6 space-y-8">
-          {
-            benefitPoints.map((p) => (
-              <li class="flex gap-4">
-                <span
-                  class="mt-2 inline-block h-2.5 w-2.5 flex-none rounded-full bg-emerald-700"
-                  aria-hidden="true"
-                />
-                <div>
-                  <p class="font-semibold text-emerald-900">{p.title}</p>
-                  <p class="mt-1 text-gray-800">{p.body}</p>
-                </div>
-              </li>
-            ))
-          }
+      <div class="cs-content">
+        <span class="cs-topper">Service Benefits</span>
+        <h2 class="cs-title">The Benefits of Massage Therapy</h2>
+        <p class="cs-text">
+          Discover how regular massage can relieve pain, reduce stress, and
+          improve overall well-being.
+        </p>
+        <ul class="cs-faq-group">
+          <!-- Therapeutic Massage ------------->
+          <li class="cs-faq-item active">
+            <button class="cs-button">
+              <img
+                class="cs-icon"
+                aria-hidden="true"
+                loading="lazy"
+                decoding="async"
+                src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJjdXJyZW50Q29sb3IiIGQ9Ik0xMS4yIDIxLjg3NXEtMS43NS0uMzI1LTMuNC0xLjEyNXQtMi45MzctMi4yMjVUMi43ODggMTVUMiAxMHYtLjJxMC0uMzUuMjI1LS41NzVUMi44IDlIM3ExLjI3NSAwIDIuNjI1LjMyNXQyLjUyNS45NzVxLjI3NS0xLjg1IDEuMS0zLjh0MS45NzUtMy41MjVxLjMtLjQyNS43NzUtLjQyNXQuNzc1LjQyNVExMy45MjUgNC41NSAxNC43NSA2LjV0MS4xIDMuOHExLjE3NS0uNjUgMi41MjUtLjk3NVQyMSA5aC4xcS4zNzUgMCAuNjM4LjI2M1QyMiA5Ljl2LjFxMCAyLjktLjc4OCA1dC0yLjA3NSAzLjUyNVQxNi4yIDIwLjc1dC0zLjQgMS4xMjVxLS4zMjUuMDUtLjguMDV0LS44LS4wNW0uNzUtMS45MjVxLS4yNzUtNC4xMjUtMi40ODgtNi4yNjJUNC4wNSAxMS4wNXEtLjA1IDAgMCAwcS4yNzUgNC4yMjUgMi41NjMgNi4zNXQ1LjMzNyAyLjU1cS4wNS4wMjUgMCAuMDEzdDAtLjAxM20tMS45LTguNXEuNS40MjUgMS4wNSAxLjAxM1QxMiAxMy42cS4zNzUtLjU1LjkxMy0xLjEzN3QxLjAzNy0xLjAxM3EtLjA1LTEuNDI1LS41NjItMi45NzVUMTIgNS40NXYuMDEzdi0uMDEzcS0uODc1IDEuNDc1LTEuMzg4IDMuMDI1dC0uNTYyIDIuOTc1bTMuMDUgNC4yNXEuMy44LjUxMyAxLjc1dC4zMzcgMi4wNXEuOS0uMyAxLjktLjlUMTcuNyAxN3QxLjQ3NS0yLjQ2MnQuNzc1LTMuNDg4cTAtLjA1IDAgMHEtMi4zNS4zNS00LjEyNSAxLjU2M1QxMy4xIDE1LjciLz48L3N2Zz4="
+                alt="icon"
+                width="32"
+                height="32"
+              />
+              <span class="cs-button-text"> Therapeutic Massage </span>
+              <span class="cs-indicator" aria-hidden="true"></span>
+            </button>
+            <p class="cs-item-p">
+              This customized massage helps relieve muscle tension, boost
+              circulation, and reduce stress. It promotes overall relaxation and
+              supports physical and emotional well-being.
+            </p>
+          </li>
+          <!-- Deep Tissue Massage ------------->
+          <li class="cs-faq-item">
+            <button class="cs-button">
+              <img
+                class="cs-icon"
+                aria-hidden="true"
+                loading="lazy"
+                decoding="async"
+                src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJjdXJyZW50Q29sb3IiIGQ9Ik03IDcuNzZ2OC40OWg0LjA4bC42LS45MWMxLjE2LTEuNzkgMy4yNS0yLjU5IDQuNzktMi41OWMuNTMgMCAuOTguMDkgMS4zMi4yNWMuOTEuNDEgMS4xNiAxLjE4IDEuMjEgMS43NGMuMDggMS4xMy0uNSAyLjI5LTEuNSAyLjk3Yy0uOS42Mi0zLjA2IDEuMjktNS42MyAxLjI5Yy0xLjc1IDAtNC4yNi0uMzEtNi43NS0xLjdjLjI5LTIuNDUuODgtNi40MiAxLjg4LTkuNTRNNyAzQzQgNy4wOSAzIDE4LjM0IDMgMTguMzRDNS45IDIwLjMxIDkuMDggMjEgMTEuODcgMjFjMi45OSAwIDUuNTItLjc5IDYuNzctMS42NGMzLTIuMDQgMy4zLTYuNjUgMC04LjE4Yy0uNjQtLjI5LTEuMzgtLjQzLTIuMTctLjQzYy0yLjMgMC00Ljk3IDEuMjEtNi40NyAzLjVIOVY3LjA5aDJMMTIgNHoiLz48L3N2Zz4="
+                alt="icon"
+                width="32"
+                height="32"
+              />
+              <span class="cs-button-text"> Deep Tissue Massage </span>
+              <span class="cs-indicator" aria-hidden="true"></span>
+            </button>
+            <p class="cs-item-p">
+              Ideal for individuals experiencing chronic tension or
+              post‑exercise soreness. Focused techniques reach deeper muscle
+              layers to provide effective relief and improved mobility.
+            </p>
+          </li>
+          <!-- Prenatal Massage ---------------->
+          <li class="cs-faq-item">
+            <button class="cs-button">
+              <img
+                class="cs-icon"
+                aria-hidden="true"
+                loading="lazy"
+                decoding="async"
+                src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PHBhdGggZmlsbD0iY3VycmVudENvbG9yIiBkPSJNMjI0IDE0NGE2NCA2NCAwIDEgMC02NC02NGE2NC4wNyA2NC4wNyAwIDAgMCA2NCA2NG0wLTk2YTMyIDMyIDAgMSAxLTMyIDMyYTMyLjAzNiAzMi4wMzYgMCAwIDEgMzItMzJtMTI5Ljk1OSAyMDMuMzdjLTE1LjAyMS0xNi45LTM1LjA2My0yNy42NTktNjIuNjEtMzMuNTA2TDI2Ni41NTEgMTYwaC04OC40MjhMMTUyIDM0Mi44NjNWNDAwaDU2djk2aDk2di05Nmg4MHYtNDhjMC00NC45NzItOS44MjYtNzcuODg4LTMwLjA0MS0xMDAuNjNNMzUyIDM2OGgtODB2OTZoLTMydi05NmgtNTZ2LTIyLjg2M0wyMDUuODc3IDE5MmgzOS41NzJsMjMuMjkxIDU0LjM0NGw4LjYyOSAxLjQzOGMyNC41IDQuMDgzIDQxLjIzMyAxMS45NzkgNTIuNjcyIDI0Ljg0OEMzNDQuODE3IDI4OS4yNTMgMzUyIDMxNS4yMTUgMzUyIDM1MloiLz48L3N2Zz4="
+                alt="icon"
+                width="32"
+                height="32"
+              />
+              <span class="cs-button-text"> Prenatal Massage </span>
+              <span class="cs-indicator" aria-hidden="true"></span>
+            </button>
+            <p class="cs-item-p">
+              Designed for expectant mothers, prenatal massage eases physical
+              discomfort, reduces stress, and improves sleep. It can also help
+              decrease swelling and promote circulation during pregnancy.
+            </p>
+          </li>
+          <!-- Sports Massage ------------------>
+          <li class="cs-faq-item">
+            <button class="cs-button">
+              <img
+                class="cs-icon"
+                aria-hidden="true"
+                loading="lazy"
+                decoding="async"
+                src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48ZyBmaWxsPSJjdXJyZW50Q29sb3IiPjxwYXRoIGQ9Ik0xNS4yNSA2LjVhMi4yNSAyLjI1IDAgMSAwIDAtNC41YTIuMjUgMi4yNSAwIDAgMCAwIDQuNW0tMi44NjctLjAwMWMtMS40OTUtLjIxLTQuOTEyLjM5Ny02LjMyIDQuMTVhMSAxIDAgMSAwIDEuODczLjcwMmMuNTg0LTEuNTU1IDEuNjM2LTIuMzE2IDIuNTc0LTIuNjU1bC0xLjE3IDMuMDA2cS0uMDI5LjA3NS0uMDQ1LjE1YTEgMSAwIDAgMCAuMTY0LjkxbDMuNTYyIDQuNjA3bC4yMzEgMy42OTNhMSAxIDAgMSAwIDEuOTk2LS4xMjRsLS4yNy00LjMwN2wtMi4wOTItMi43MDdsMS4zNzMtMi42NjFsLjA5My4xMzRhMiAyIDAgMCAwIDIuNDIuNzExbDIuMTE1LS44ODZhMSAxIDAgMCAwLS43NzMtMS44NDRsLTIuMTE1Ljg4NmwtMS42MDYtMi4zMzVhMy4wNCAzLjA0IDAgMCAwLTEuNjYxLTEuMzZhMS40IDEuNCAwIDAgMC0uMzUtLjA3Ii8+PHBhdGggZD0ibTguNDUgMTYuNDVsLjgyNy0yLjQ1MmwxLjQ2OSAxLjlsLS40MDIgMS4xOTFhMiAyIDAgMCAxLTIuMDMyIDEuMzU2bC0yLjg4LS4xOTdhMSAxIDAgMSAxIC4xMzYtMS45OTZ6Ii8+PC9nPjwvc3ZnPg=="
+                alt="icon"
+                width="32"
+                height="32"
+              />
+              <span class="cs-button-text"> Sports Massage </span>
+              <span class="cs-indicator" aria-hidden="true"></span>
+            </button>
+            <p class="cs-item-p">
+              Perfect for athletes and active individuals, sports massage
+              enhances performance, prevents injuries, and supports quicker
+              recovery. It also helps improve flexibility and reduce muscle
+              soreness.
+            </p>
+          </li>
+          <!-- Cupping Therapy ------------------>
+          <li class="cs-faq-item">
+            <button class="cs-button">
+              <img
+                class="cs-icon"
+                aria-hidden="true"
+                loading="lazy"
+                decoding="async"
+                src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDQ4IDQ4Ij48ZyBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI0Ij48cGF0aCBkPSJNMTAgMzFzLjA3MSA2IDE0IDZzMTQtNiAxNC02VjE1SDEweiIvPjxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgZD0iTTI0IDR2Nm0tOC01djRtMTYtNHY0TTE0IDM2djVhMiAyIDAgMCAwIDIgMmgxNmEyIDIgMCAwIDAgMi0ydi01Ii8+PC9nPjwvc3ZnPg=="
+                alt="icon"
+                width="32"
+                height="32"
+              />
+              <span class="cs-button-text"> Cupping Therapy </span>
+              <span class="cs-indicator" aria-hidden="true"></span>
+            </button>
+            <p class="cs-item-p">
+              A targeted technique using gentle negative pressure to lift
+              fascia, improve tissue glide, and release tight areas. When paired
+              with hands‑on work, it helps reduce tension and supports recovery.
+            </p>
+          </li>
+          <!-- Hot Stone Massage ---------------->
+          <li class="cs-faq-item">
+            <button class="cs-button">
+              <img
+                class="cs-icon"
+                aria-hidden="true"
+                loading="lazy"
+                decoding="async"
+                src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJjdXJyZW50Q29sb3IiIGQ9Ik0xMy4zIDIwLjcyNXEtLjE1LjEyNS0uMzEyLjJ0LS4zNjMuMDc1dC0uNC0uMDg4dC0uMzUtLjIzN3EtMS4wMjUtMS4xLTEuNTEzLTIuMjVUOS44NzYgMTZxMC0uOTI1LjI3NS0xLjk1dC45NS0yLjY1cS41NzUtMS40MjUuOC0yLjE4N3QuMjI1LTEuNDEzcTAtLjg1LS4zNzUtMS41ODd0LTEuMTc1LTEuNDg4cS0uMTUtLjE1LS4yMzctLjM1dC0uMDg4LS40dC4wNzUtLjM2MnQuMi0uMzEzcS4xNS0uMTUuMzM3LS4yMjVUMTEuMjUgM3QuMzc1LjA3NXQuMzI1LjJxMS4xIDEuMDI1IDEuNjM3IDIuMTV0LjUzOCAyLjM3NXEwIC44NzUtLjI2MyAxLjgzOHQtLjkxMiAyLjUxMnEtLjYyNSAxLjUtLjg1IDIuM3QtLjIyNSAxLjUyNXEwIC44NzUuMzYzIDEuNjg4VDEzLjM1IDE5LjNxLjEyNS4xNS4yLjMyNXQuMDc1LjM3NXQtLjA3NS4zODh0LS4yNS4zMzdtNC44NzUgMHEtLjE1LjEyNS0uMzEyLjJUMTcuNSAyMXQtLjQtLjA4OHQtLjM1LS4yMzdxLTEuMDI1LTEuMS0xLjUxMy0yLjIzOHQtLjQ4Ny0yLjQxMnEwLS45MjUuMjc1LTEuOTc1dC45NS0yLjY1cS41NzUtMS40MjUuOC0yLjE3NXQuMjI1LTEuNHEwLS44NS0uMzc1LTEuNjEyVDE1LjQ1IDQuNzI1cS0uMTUtLjE1LS4yMjUtLjMzN1QxNS4xNSA0dC4wNjMtLjM2M3QuMTg3LS4zMTJxLjE1LS4xNS4zNS0uMjM4dC40LS4wODd0LjM2My4wNzV0LjMxMi4ycTEuMSAxLjAyNSAxLjYzOCAyLjE1VDE5IDcuOHEwIC44NzUtLjI2MiAxLjgzOHQtLjkxMyAyLjUzN3EtLjYyNSAxLjUtLjg1IDIuM3QtLjIyNSAxLjVxMCAuODc1LjM3NSAxLjcxM3QxLjEyNSAxLjYzN3EuMTI1LjE1LjE4Ny4zMjV0LjA2My4zNXEwIC4yLS4wNzUuNHQtLjI1LjMyNW0tOS43NSAwcS0uMTUuMTI1LS4zMTMuMlQ3Ljc1IDIxdC0uNC0uMDg4dC0uMzUtLjIzN3EtMS4wMjUtMS4xLTEuNTEzLTIuMjM4VDUgMTYuMDI1cTAtLjkyNS4yNzUtMS45NzV0Ljk1LTIuNjVxLjU3NS0xLjQyNS44LTIuMTc1dC4yMjUtMS40cTAtLjg1LS4zNzUtMS42MTJUNS43IDQuNzI1cS0uMTc1LS4xNS0uMjUtLjMzN1Q1LjM3NSA0dC4wNzUtLjM3NXQuMi0uMzI1cS4xNS0uMTUuMzM4LS4yMjVUNi4zNzUgM3QuMzc1LjA3NXQuMzI1LjJxMS4xIDEuMDI1IDEuNjM4IDIuMTM4VDkuMjUgNy44cTAgLjg3NS0uMjUgMS44Mzh0LS45IDIuNTEycS0uNjI1IDEuNS0uODUgMi4zdC0uMjI1IDEuNTI1cTAgLjg3NS4zNjMgMS43MTNUOC41IDE5LjMyNXEuMTI1LjE1LjE4OC4zMjV0LjA2Mi4zNXEwIC4yLS4wNzUuNHQtLjI1LjMyNSIvPjwvc3ZnPg=="
+                alt="icon"
+                width="32"
+                height="32"
+              />
+              <span class="cs-button-text"> Hot Stone Massage </span>
+              <span class="cs-indicator" aria-hidden="true"></span>
+            </button>
+            <p class="cs-item-p">
+              Heated basalt stones gently melt tension and enhance circulation,
+              promoting relaxation with therapeutic depth for an overall sense
+              of calm.
+            </p>
+          </li>
+          <!-- Lymphatic Drainage Massage ------->
+          <li class="cs-faq-item">
+            <button class="cs-button">
+              <img
+                class="cs-icon"
+                aria-hidden="true"
+                loading="lazy"
+                decoding="async"
+                src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDQ4IDQ4Ij48cGF0aCBmaWxsPSJjdXJyZW50Q29sb3IiIGQ9Ik0xMS4zMTYgNi4wNTFhMSAxIDAgMCAwLS42MzIgMS44OThjLjQzNC4xNDUgMS4xNS40NzQgMS44ODguOTc1QzExLjc3NCA5LjM5MSAxMC4wMTUgMTAgNyAxMGExIDEgMCAxIDAgMCAyYzMuNzA3IDAgNi4wMzMtLjg1IDcuMTE3LTEuNzEzYy4xOTMuMjI3LjM3MS40Ny41MjUuNzI3YTEgMSAwIDAgMCAuMTc1LjIxN2MtLjI5Mi45NTctLjAwNCAyLjE2Mi44MzggMy4xYy43MDUuNzg0IDEuNjM5IDEuMjAzIDIuNTAyIDEuMjA3cS4wNi4wOTUuMTQ0LjE3N2wuMDIxLjAyOGMuMDM3LjA1LjExLjE2NS4xOTguMzY2Yy4xNzQuNDAzLjQwNCAxLjE2LjQ4MiAyLjQ1MXEwIC4wMjMuMDA0LjA0NmMtLjcwMy41ODQtMS4wMTQgMS41MDMtLjk0IDIuNDkzbC0uMDEzLjAwN2MtLjAzOC4wMTktLjE3My4wNjQtLjQ1LjA5MWMtLjI2LjAyNi0uNTc2LjAzLS45MjcuMDE2YTE5IDE5IDAgMCAxLTEuNzAyLS4xNTdjLS4wODQtMS4zMzEtMS4zNy0yLjUyMi0zLjA5LTIuNzdhNC40IDQuNCAwIDAgMC0xLjE5My0uMDFhMSAxIDAgMCAwLS4xNzItLjEzYTEgMSAwIDAgMS0uMTUtLjIwNUMxMC4yMjIgMTcuNjg3IDEwIDE3LjExNyAxMCAxNmExIDEgMCAxIDAtMiAwYzAgMS4zODMuMjc3IDIuMzEzLjYzMiAyLjkzNHEuMDYzLjExMS4xMy4yMDlhMi41IDIuNSAwIDAgMC0uNDQ3LjU1NkExNCAxNCAwIDAgMCA2IDE5LjVhMSAxIDAgMSAwIDAgMmMuODU4IDAgMS42MTguMSAyLjE4NS4yMDdjLjQxOCAxLjAxIDEuNTI0IDEuODI3IDIuOTE1IDIuMDI3YzEuMi4xNzMgMi4zMjgtLjE1NSAzLjA1NS0uNzk1cS4wOTcuMDM0LjIwNC4wNTFjLjU5My4wODUgMS40MzQuMTkgMi4yNC4yMjJhOSA5IDAgMCAwIDEuMi0uMDI1YTMuOCAzLjggMCAwIDAgLjg3OS0uMThxLjE5Mi4zMzQuNDQ0LjY0NmMxLjI3NyAxLjU4NyAzLjI1MyAyLjE1NiA0LjYwNSAxLjM5M2MuNDgzLjM0NSAxLjE1MS43NTYgMS45MTQgMS4xMWExMCAxMCAwIDAgMCAxLjc0LjYzYTUuNSA1LjUgMCAwIDAtLjUwMSAxLjIyNWE4LjMgOC4zIDAgMCAwLTIuOTYuNzA3YTcgNyAwIDAgMC0xLjQyLjg0N2MtLjgwOC0uNDc0LTEuOTM3LS42LTMuMDY1LS4yNTVjLTEuMjk4LjM5Ni0yLjI1IDEuMzEtMi41NSAyLjMxM2MtLjc2NC4wMzktMS42OTctLjAwMi0yLjY2Ni0uMDk0YTM3IDM3IDAgMCAxLTIuMDU2LS4yNTVhNC41NSA0LjU1IDAgMCAwLS43NzUtMS42ODZhNC42IDQuNiAwIDAgMC0xLjMzNC0xLjIzNWMuMDI2LS4xNzIuMDYzLS4zNTkuMTEzLS41NDdjLjEzLS40OTMuMzItLjg4LjU0LTEuMDk5YTEgMSAwIDAgMC0xLjQxNC0xLjQxNGMtLjU4LjU4LS44OSAxLjM2LTEuMDYgMi4wMDFhNyA3IDAgMCAwLS4xMzIuNjEyYTIgMiAwIDAgMC0uMi4wNDRjLS4yNzQtLjUxMi0uNjY4LTEuMTMxLTEuMTk0LTEuNjU3YTEgMSAwIDAgMC0xLjQxNCAxLjQxNGMuMzkzLjM5My43MTEuOTEyLjkzOCAxLjM2NWMuMTEuMjIxLjE5My40MTQuMjQ3LjU1bC4wMTIuMDNjLS4xMzQuODg0LjE0MyAxLjk2LjgyOCAyLjljMS4xMzkgMS41NjMgMi45NzIgMi4xNjYgNC4wOTYgMS4zNDdjLjIzLS4xNjguNDE0LS4zODMuNTQ5LS42MzJjLjYzOC4wOTUgMS4zNDcuMTg2IDIuMDY4LjI1NGMxLjA2Mi4xIDIuMjExLjE1NyAzLjIwNi4wODRjLjE2LjIwNi4zNi4zODYuNTg3LjUzN2MtLjQ0OS43OTMtMS4xNDEgMS40NzgtMS44MTcgMi4wMXEtLjIxOC4xNy0uNDIyLjMxNGE0LjggNC44IDAgMCAwLTEuMjA5LS4zODJjLTIuMDA4LS4zNTMtMy44NTIuNTg5LTQuMTIgMi4xMDVjLS4yNjYgMS41MTYgMS4xNDUgMy4wMzIgMy4xNTMgMy4zODVjMi4wMDguMzU0IDMuODUzLS41ODkgNC4xMi0yLjEwNWMuMTAyLS41OC0uMDQzLTEuMTYyLS4zNzMtMS42NzhsLjA4Ny0uMDY3Yy44Ny0uNjgzIDEuOTM1LTEuNzE0IDIuNTU3LTMuMDU1YTQuNCA0LjQgMCAwIDAgMS4yMTMtLjE5NWMxLjcwMS0uNTIgMi44MDctMS45MyAyLjYzMi0zLjI2MmE0LjYgNC42IDAgMCAxIDEuMDk1LS42N2E2LjIgNi4yIDAgMCAxIDIuMDItLjUxOWMuMTQ1Ljg0Ny41NSAxLjU3OCAxLjE5MiAyLjA0MmExMSAxMSAwIDAgMC0uMjYzIDEuNzQ4Yy0uMDM0LjU1Mi0uMDIyIDEuMTk3LjEzIDEuODA1Yy4wOTQuMzc0LjI1Ljc3Mi41MSAxLjEyNWMtLjYzOCAxLjM3My4yOCAzLjIwNSAyLjA4NyA0LjEyOGMxLjgzOC45MzggMy45LjU4IDQuNjA0LS44cS4xMzMtLjI2LjE5LS41NDFhMTAgMTAgMCAwIDAgMS4zMDQtLjA5M2wuMDE3LS4wMDJjLjI4OC4yNjUuNjc4LjU5NCAxLjEyMi45MTRjLjU3My40MTMgMS4yOTMuODU0IDIuMDMgMS4xYTEgMSAwIDEgMCAuNjMzLTEuODk4Yy0uNDM1LS4xNDUtLjkzLS40MjgtMS40MDYtLjc2MmE4IDggMCAwIDAgMS44MzItMS4wNzZhMSAxIDAgMSAwLTEuMjM2LTEuNTcyYy0xLjA1OC44MzEtMi4yNzYgMS4xOC0zLjI2MSAxLjMxNGE4IDggMCAwIDEtMS40NTMuMDY1Yy0uMzkzLS42NDktMS4wMi0xLjIzOC0xLjgyMy0xLjY0OGMtMS4wNTEtLjUzNy0yLjE3NS0uNjUtMy4wNzctLjM5YTEuNCAxLjQgMCAwIDEtLjEzMy0uMzVjLS4wODItLjMzLS4xMDEtLjc0Ny0uMDczLTEuMTk1YTkgOSAwIDAgMSAuMjA2LTEuMzhjMS4yNzYtLjEzOCAyLjU5Ny0xLjA0NyAzLjQtMi40OWMxLjAxOC0xLjgyOC44NzItMy45MS0uMjUyLTUuMDIyYy4xMi0xLjM1Mi40ODQtMi4xMzIuNzgyLTIuNTYycS4wNC0uMDU3LjA3Ny0uMTA2Yy44NzUuNDg4IDIuMDY1LjYzNCAzLjI3My4zMTVjMi4wNjctLjU0NyAzLjQxNi0yLjI1NiAzLjA1My0zLjg0NGMuNDU1LS4zNTIuOTc2LS43OTggMS40NjUtMS4zYy43My0uNzQ2IDEuNTEzLTEuNzM4IDEuNzgtMi44MDVhMSAxIDAgMSAwLTEuOTQtLjQ4NmEyLjcgMi43IDAgMCAxLS4zMjYuNzIzQTIuNiAyLjYgMCAwIDEgNDEgMTRhMSAxIDAgMSAwLTIgMGMwIDEuMDcyLjQwMyAxLjk4Mi44MDMgMi41OTJjLS4yNjguMjQ1LS41MzYuNDY3LS43OC42NTdjLS44ODMtLjU0NC0yLjEyOS0uNzItMy4zOTMtLjM4NmMtMS4yMTYuMzIxLTIuMTgzIDEuMDQ1LTIuNyAxLjkwOWE2LjMgNi4zIDAgMCAxLTEuOTI2LS42MDFhNyA3IDAgMCAxLS43MTEtLjQwMmMuMDQ2LS42NS0uMDg0LTEuMzc3LS40MDctMi4wODRhMTQgMTQgMCAwIDAgMS41NTYtLjkyM2MuODE4LS41NjMgMS44MDUtMS4zOCAyLjQ5LTIuNDM4Yy43ODUuMzQ0IDEuNzk4LjQxNyAyLjgyNC4xMzRjMS45MzYtLjUzMyAzLjE4NS0yLjEzIDIuNzktMy41NjZjLS4zOTYtMS40MzYtMi4yODYtMi4xNjgtNC4yMjItMS42MzRjLTEuOTA2LjUyNS0zLjE0NiAyLjA4LTIuODA3IDMuNDk5YTQgNCAwIDAgMS0uMzU3LjYxOGMtLjQ2OC42NjYtMS4xNTMgMS4yNTgtMS44NTEgMS43MzlhMTIgMTIgMCAwIDEtMS42NC45MzlsLS4wMTMtLjAxYTMuNSAzLjUgMCAwIDAtLjc5OC0uNTFsLS4wODItLjQwNmwtLjA0Ni0uMjI2YTMyIDMyIDAgMCAxLS4xNDYtLjc2MmMuODEzLS40MjMgMS40NjYtMS4yNzcgMS42OS0yLjM1MmMuMzY0LTEuNzQtLjUzMi0zLjM5OC0yLTMuNzA1Yy0xLjQ3LS4zMDctMi45NTUuODU0LTMuMzE5IDIuNTkzYy0uMzMgMS41ODQuMzgzIDMuMSAxLjYyMiAzLjU5MWMuMDU1LjM0OS4xMy43MjEuMTkzIDEuMDMzbC4wNDkuMjRsLjAwOC4wNGMtMS4xLjY5OC0xLjMxNyAyLjUxOC0uNDY3IDQuMTY4Yy44ODUgMS43MTkgMi41OTMgMi42MDIgMy44MTQgMS45NzNxLjEyMy0uMDY0LjIzNS0uMTQ1Yy4yMDUuMTI1LjQ0NC4yNTkuNzEzLjM5YTguMyA4LjMgMCAwIDAgMi40NjQuNzc5bC4wMi4wNzJxLS4yMTMuMjIyLS40MjguNTI4Yy0uNDU5LjY2Mi0uODY3IDEuNjAyLTEuMDYgMi45MjVjLS43MjEgMC0xLjQ3Mi4yNi0yLjE1LjczYy0uNzg3LS4wMDYtMS42NjUtLjI3NS0yLjQ4NC0uNjU2YTEwLjMgMTAuMyAwIDAgMS0xLjU1My0uODk1Yy4zMDEtMS4xMjctLjAyLTIuNTM5LS45NTYtMy43MDFjLS44MjktMS4wMy0xLjk1Mi0xLjYzLTMuMDA3LTEuNzE3Yy0uMTEtMS4yNTUtLjM1Ni0yLjEyNC0uNjEzLTIuNzE2YTQgNCAwIDAgMC0uMzU4LS42NjVjLjczLTEuMDAzLjU0MS0yLjU5MS0uNTEtMy43NjJjLS45MTctMS4wMi0yLjIyLTEuNDIyLTMuMjUyLTEuMDk4Yy0xLjM5Ny0yLjE2My0zLjgzNS0zLjM3Ny00LjkxOS0zLjczOCIvPjwvc3ZnPg=="
+                alt="icon"
+                width="32"
+                height="32"
+              />
+              <span class="cs-button-text"> Lymphatic Drainage Massage </span>
+              <span class="cs-indicator" aria-hidden="true"></span>
+            </button>
+            <p class="cs-item-p">
+              This gentle technique stimulates the lymphatic system to help
+              detoxify the body, reduce swelling, and improve immune function.
+              It’s often used for post-surgery recovery or to manage lymphedema.
+            </p>
+          </li>
+          <!-- TMJ Massage ---------------------->
+          <li class="cs-faq-item">
+            <button class="cs-button">
+              <img
+                class="cs-icon"
+                aria-hidden="true"
+                loading="lazy"
+                decoding="async"
+                src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDQ4IDQ4Ij48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBkPSJNMTQuNTc3IDEwLjg1M2MuNDAzIDEuNTgxLjk2NCAyLjk5IDIuMzI1IDMuNTE0YzEuNDYyLS4yODUgMi44MzEtLjA5MSA0LjA5Mi42NTdjMS40OC43MDIgMi43ODUuMTk4IDQuMDgxLS4zNDljMi4zNC42MDcgMi44ODUuMDQgMy45My0uMmMuNTg4LjM3MyAxLjE0LjY5NyAyLjA5Mi45OWMuODguMjcuNTI3IDEuMzE4LjYyIDIuMDcybS0xNC44MTUtMy4xN2E5LjEgOS4xIDAgMCAxLTEuNjMxIDIuMTMyYy0uMDgxLjc5NC0uMjgzIDEuMjM5LS40NzUgMS43MTFjLjEyNC42MzMuMDM1IDEuMTguMzE2IDEuODcxYy4zMzQgMS44MTgtMS4zMDcgMi4yOC0uMDI1IDYuMzM1Yy0uNTQ2LTIuMzM4LTIuMjIzLTQuMzc0LTEuNzU4LTcuMzNsLTEuMjQ4LS4wOTFjMS4wNzktMS4yOTguMzQyLTMuMTM0LjExNi00Ljg3M2MtLjIxNS0xLjY2LjI5LTIuOTc2IDIuMzgtMy4yNjljLTEuMDU4LTIuNDQyIDIuMTgyLTYuMDIgNy43My01LjY5M2MxLjE3LS41OTIgMi40NDgtMS4wNzYgMy44MjQtLjExM2MxLjg4LS4xMDIgMi40MzYtLjAxIDMuNjk2IDEuMDc4czEuODY1LjQ2MiAyLjY3NC40NDdjLjQ0OS45MDguMTY2IDEuNjk3LS4wMzcgMi4wMTdjLjkxMi44MTQgMi4yNS44MiAyLjM5MiAzLjNjLjA4IDEuMzUzLjQwNSAyLjI5MiAxLjA2MyAzLjAyYy0uNDkuMDc2LS45NS4yMy0xLjU2Ny0uMDM0Yy4wNDMgMS41ODcuMzM0IDMuMTM4LS4yOCA0LjgxN2MuMDI1IDEuMjk4LjA2NCAyLjYtLjYzNCAzLjcwMmwtMS4yNDkgMi41NjRjLjYxLTEuMzE0Ljc0NC0yLjY5OC4xMjQtNC4wNmMtLjQ1LS45ODYtLjI4NS0xLjU0NC0uMDc2LTIuMThjLjMzNy0xLjAzLS4xNjktMS41MzctLjUyLTIuMTgybS0uNzk4IDE3LjI0YTQuNCA0LjQgMCAwIDEtLjg2Ny43OTNjLS4xNzQuMTU4LS4zNjkuMzI0LS41Ny40OTVtMCAwYy0uODA1LjY4Ni0xLjcyIDEuNDM0LTEuOTE3IDEuODhjLS42NjkgMS41MDgtMS45MDIgMS4zNS0yLjY5OSAxLjM5NmgtMi43NzJjLS43OTYtLjA0NS0yLjAyOS4xMTItMi42OTYtMS4zOTVjLS4xOTgtLjQ0Ny0xLjExMy0xLjE5NS0xLjkyLTEuODhtMTUuMTMtMTEuMThzLjE0NS41NDguMTIzIDEuMTAyYy0uMDQ4IDEuMTY3LS45NTkgMy4zNDgtLjk1OSAzLjM0OGwtMS45MzggMy4wM2wtLjM1MSAzLjdtMi4yNTEtNS44OGwtLjEzMiAyLjg0MmEyLjkyIDIuOTIgMCAwIDEtLjY4NSAxLjc0OGwuMTcyIDQuNzhjLjA1NyAxLjU3MyAxLjI5MyAyLjgyNSAzLjEzIDMuOTQ1bS0yLjQ0Ni0xNC4xNjZsLS4wMzkuODVjLjU0OC0uMjg2IDEuMTc3LS4zNjQgMS40MzQtMS40MTJjMS4wOTktMS42MDkuNjU1LTIuMjg1Ljc2LTMuMzY2Yy4wNTQtLjU2Ny0uMDMxLTEuMTQtLjAyLTEuNzA4Yy4wMDctLjMzMi0uMDMxLS4yNzItLjQ5OC0uMzM5TTE2LjA0IDM0Ljc3M3EuMzguNDU2Ljg2Ny43OTVjLjE3NC4xNTguMzcuMzI0LjU3LjQ5NU0xNC40NCAyNC40MjdzLS4yMzYgMS4wMDctLjIxNCAxLjU1OWMuMDQ5IDEuMTY3Ljk2IDMuMzQ4Ljk2IDMuMzQ4bDEuOTM4IDMuMDNsLjM1IDMuN20tMi4yNS01Ljg4bC4xMyAyLjg0MmEyLjkyIDIuOTIgMCAwIDAgLjY4NiAxLjc0OGwtLjE3MiA0Ljc4Yy0uMDU2IDEuNTc1LTEuMjkyIDIuODI2LTMuMTI4IDMuOTQ2bTIuNDQ1LTE0LjE2NmwuMDQuODUxYy0uNTQ5LS4yODctMS4xNzgtLjM2NS0xLjQzNC0xLjQxMmMtMS4xLTEuNjEtLjY1Ni0yLjI4Ni0uNzYtMy4zNjdjLS4wNTUtLjU2Ny4wMy0xLjE0LjAxOS0xLjcwOGMtLjAwNi0uMzMxLjM0Ni0uNDU4LjgxNC0uNTI0IiBzdHJva2Utd2lkdGg9IjIiLz48L3N2Zz4="
+                alt="icon"
+                width="32"
+                height="32"
+              />
+              <span class="cs-button-text"> TMJ Massage </span>
+              <span class="cs-indicator" aria-hidden="true"></span>
+            </button>
+            <p class="cs-item-p">
+              TMJ massage targets the jaw, neck, and head to relieve pain from
+              temporomandibular joint dysfunction. It can reduce headaches, jaw
+              tension, and improve jaw mobility.
+            </p>
+          </li>
+          <!-- Japanese Head Spa ---------------->
+          <li class="cs-faq-item">
+            <button class="cs-button">
+              <img
+                class="cs-icon"
+                aria-hidden="true"
+                loading="lazy"
+                decoding="async"
+                src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Im0xMi41OTMgMjMuMjU4bC0uMDExLjAwMmwtLjA3MS4wMzVsLS4wMi4wMDRsLS4wMTQtLjAwNGwtLjA3MS0uMDM1cS0uMDE2LS4wMDUtLjAyNC4wMDVsLS4wMDQuMDFsLS4wMTcuNDI4bC4wMDUuMDJsLjAxLjAxM2wuMTA0LjA3NGwuMDE1LjAwNGwuMDEyLS4wMDRsLjEwNC0uMDc0bC4wMTItLjAxNmwuMDA0LS4wMTdsLS4wMTctLjQyN3EtLjAwNC0uMDE2LS4wMTctLjAxOG0uMjY1LS4xMTNsLS4wMTMuMDAybC0uMTg1LjA5M2wtLjAxLjAxbC0uMDAzLjAxMWwuMDE4LjQzbC4wMDUuMDEybC4wMDguMDA3bC4yMDEuMDkzcS4wMTkuMDA1LjAyOS0uMDA4bC4wMDQtLjAxNGwtLjAzNC0uNjE0cS0uMDA1LS4wMTgtLjAyLS4wMjJtLS43MTUuMDAyYS4wMi4wMiAwIDAgMC0uMDI3LjAwNmwtLjAwNi4wMTRsLS4wMzQuNjE0cS4wMDEuMDE4LjAxNy4wMjRsLjAxNS0uMDAybC4yMDEtLjA5M2wuMDEtLjAwOGwuMDA0LS4wMTFsLjAxNy0uNDNsLS4wMDMtLjAxMmwtLjAxLS4wMXoiLz48cGF0aCBmaWxsPSJjdXJyZW50Q29sb3IiIGQ9Ik05Ljg0IDIwLjI3NWMtLjQxOS45NzItMS41ODUgMS41MzMtMi42NjguOTc5Yy0yLjA0Ni0xLjA0OS0zLjQ1NC0yLjI0OC00LjMxNS0zLjU4Yy0uODcxLTEuMzQ5LTEuMTQtMi43NjYtMS4wMTktNC4xNUMyLjA3NCAxMC44NDEgMy43ODQgOC4yOSA1LjIgNi40QzcuMDg0IDMuODg4IDkuNDggMi41IDEyIDIuNXM0LjkxNiAxLjM4OCA2LjggMy45YzEuNDAxIDEuODY4IDMuMjQgNC40MzQgMy41NCA3LjEyNWMuMTU1IDEuMzk3LS4xIDIuODMyLTEuMDA4IDQuMTk0Yy0uODk0IDEuMzQyLTIuMzczIDIuNTQtNC41MzggMy41ODVjLTEuMDgzLjUyMy0yLjIzOC0uMDQ3LTIuNjQzLTEuMDIzYy0uNzIyLjQ1NC0xLjQ3OC43MTktMi4xNS43MTljLS42NzYgMC0xLjQzNy0uMjY4LTIuMTYyLS43MjVaTTYuOCA3LjZjMS42MTYtMi4xNTQgMy40Ny0zLjEgNS4yLTMuMXMzLjU4NC45NDYgNS4yIDMuMWMxLjQ1NCAxLjkzOCAyLjkyMiA0LjA4MiAzLjE1MiA2LjE0N2MuMTA5Ljk4LS4wNjUgMS45MzMtLjY4NCAyLjg2M2MtLjYyNi45MzgtMS43NTEgMS45Mi0zLjY2OCAyLjg1N3YtLjkwMWMuODY2LTEuMTUgMS41LTIuNjkyIDEuNS00LjU2NnEwLS41NzUtLjA2MS0xLjExM2ExIDEgMCAwIDAtLjk4NC0uODg3YTQuNSA0LjUgMCAwIDEtNC40MjUtMy45NzdhMS4wMSAxLjAxIDAgMCAwLTEuMjY4LS44NDdDOC4zNjggNy44NiA2LjUgMTAuNDA1IDYuNSAxNGMwIDEuODc0LjYzNCAzLjQxNiAxLjUgNC41NjZ2Ljg2NGMtMS43ODctLjkyOC0yLjg1Ni0xLjkwNC0zLjQ2My0yLjg0M2MtLjYwNy0uOTM4LS43OTMtMS45MDItLjcwNi0yLjg4N2MuMTgtMi4wNTUgMS41NC00LjE5NiAyLjk3LTYuMVpNOC41IDE0YzAtMi4yMjIuODUtMy42NzQgMS44NDMtNC40MTJhNi41MSA2LjUxIDAgMCAwIDUuMTU3IDQuMzM2Yy4wMTIgMS40MDgtLjQ2OCAyLjc4OS0xLjQyNCAzLjgzMkMxMy4yNDQgMTguNjYzIDEyLjM2NiAxOSAxMiAxOXMtMS4yNDMtLjMzNy0yLjA3NS0xLjI0NEM5LjEzOCAxNi44OTcgOC41IDE1LjYzMyA4LjUgMTQiLz48L2c+PC9zdmc+"
+                alt="icon"
+                width="32"
+                height="32"
+              />
+              <span class="cs-button-text"> Japanese Head Spa </span>
+              <span class="cs-indicator" aria-hidden="true"></span>
+            </button>
+            <p class="cs-item-p">
+              A relaxing scalp treatment that boosts blood flow to the head and
+              scalp, reducing stress and promoting mental clarity. It also
+              supports healthier hair growth and relieves tension-related
+              headaches.
+            </p>
+          </li>
         </ul>
       </div>
     </div>
   </section>
+  <!--            Services Benefits Script                -->
+  <script>
+    const faqItems = Array.from(document.querySelectorAll('.cs-faq-item'));
+    for (const item of faqItems) {
+      const onClick = () => {
+        item.classList.toggle('active');
+      };
+      item.addEventListener('click', onClick);
+    }
+  </script>
 
-  <section class="bg-orange-100">
-    <div class="mx-auto max-w-4xl px-6 py-16 md:py-20">
-      <header class="text-center">
-        <h2 class="font-serif text-3xl md:text-4xl text-gray-900">
-          How to Book an Appointment
+  <!-- ============================================ -->
+  <!--                     CTA                      -->
+  <!-- ============================================ -->
+
+  <section id="cta-697">
+    <div class="cs-container">
+      <div class="cs-content">
+        <h2 class="cs-title">
+          Ready to experience therapeutic care—tailored to your goals?
         </h2>
-        <p class="mt-4 text-gray-700 leading-7">
-          Booking a therapeutic massage at iMassage Therapeutic Clinique is
+        <a href="/contact" class="cs-button-solid">Contact Us</a>
+      </div>
+    </div>
+    <!--SVG Waves Background-->
+    <img
+      class="cs-background"
+      src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FGraphics%2Fwaves-3.svg"
+      alt="wave graphic"
+      width="1920"
+      height="318"
+      loading="lazy"
+      decoding="async"
+      aria-hidden="true"
+    />
+  </section>
+
+  <!-- ============================================ -->
+  <!--                Who Can Benefit               -->
+  <!-- ============================================ -->
+
+  <section id="why-choose-1662">
+    <div class="cs-container">
+      <div class="cs-content">
+        <span class="cs-topper">Healing Tailored to Your Needs</span>
+        <h2 class="cs-title">Who Benefits from Our Services</h2>
+      </div>
+      <div class="cs-wrapper">
+        <ul class="cs-card-group">
+          <li class="cs-item">
+            <span class="cs-item-number">01</span>
+            <div class="cs-item-wrapper">
+              <h3 class="cs-h3">
+                Individuals with Chronic Pain or Muscle Tension
+              </h3>
+              <p class="cs-item-text">
+                Persistent discomfort can improve with targeted therapeutic
+                massage—focused work to release tight areas and support easier
+                movement.
+              </p>
+            </div>
+          </li>
+          <li class="cs-item">
+            <span class="cs-item-number">02</span>
+            <div class="cs-item-wrapper">
+              <h3 class="cs-h3">Active Individuals Needing Muscle Recovery</h3>
+              <p class="cs-item-text">
+                Regular sessions aid recovery between workouts, enhance
+                performance, and help reduce the risk of overuse injuries.
+              </p>
+            </div>
+          </li>
+        </ul>
+        <ul class="cs-card-group">
+          <li class="cs-item">
+            <span class="cs-item-number">03</span>
+            <div class="cs-item-wrapper">
+              <h3 class="cs-h3">People Experiencing Stress or Anxiety</h3>
+              <p class="cs-item-text">
+                Massage provides a calm, restorative reset that helps lower
+                stress levels, settle the nervous system, and promote better
+                sleep.
+              </p>
+            </div>
+          </li>
+          <li class="cs-item">
+            <span class="cs-item-number">04</span>
+            <div class="cs-item-wrapper">
+              <h3 class="cs-h3">Anyone Seeking Relaxation and Self‑Care</h3>
+              <p class="cs-item-text">
+                A rejuvenating way to prioritize well‑being—feel lighter, more
+                balanced, and ready for the rest of your day.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!---SVG Graphic-->
+      <img
+        class="cs-floater"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/diagnol-ovals.svg"
+        alt="graphic"
+        loading="lazy"
+        decoding="async"
+        height="710"
+        aria-hidden="true"
+        width="690"
+      />
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!--                   Steps                      -->
+  <!-- ============================================ -->
+
+  <section id="steps-1675">
+    <div class="cs-container">
+      <div class="cs-content">
+        <span class="cs-topper">Steps to Book Your Massage</span>
+        <h2 class="cs-title">How to Book an Appointment</h2>
+        <p class="cs-text">
+          Booking a therapeutic massage at Kabayan Healing Touch Massage is
           simple. Follow these steps to reserve your in‑clinic session.
         </p>
-
-        <span
-          class="mt-5 inline-block rounded-full bg-emerald-900 px-4 py-1 text-xs font-semibold tracking-wide text-emerald-50"
-        >
-          Steps to Book Your Massage
-        </span>
-      </header>
-
-      <ol class="mt-12 space-y-10">
-        {
-          steps.map((s) => (
-            <li class="grid grid-cols-[4rem_1fr] items-start gap-6">
-              <div class="flex h-16 w-16 items-center justify-center rounded-full bg-[#3b3a2f] text-2xl font-serif text-white">
-                {s.num}
-              </div>
-
-              <div>
-                <h3 class="font-semibold text-[#3b3a2f]">{s.title}</h3>
-                <p class="mt-2 text-gray-700">{s.body}</p>
-              </div>
-            </li>
-          ))
-        }
-      </ol>
+      </div>
+      <ul class="cs-card-group">
+        <li class="cs-item">
+          <span class="cs-number">01</span>
+          <h3 class="cs-h3">Choose Your Service</h3>
+          <p class="cs-item-text">
+            Select from our therapeutic treatments: deep‑tissue, hot stone,
+            Swedish, cupping, or lymphatic massage—delivered in‑clinic.
+          </p>
+        </li>
+        <li class="cs-item">
+          <span class="cs-number">02</span>
+          <h3 class="cs-h3">Pick Your Time</h3>
+          <p class="cs-item-text">
+            Use our online booking to find a time that suits your schedule.
+            You’ll receive a confirmation once your appointment is set.
+          </p>
+        </li>
+        <li class="cs-item">
+          <span class="cs-number">03</span>
+          <h3 class="cs-h3">Schedule Your Appointment</h3>
+          <p class="cs-item-text">
+            Prefer to speak with us? Call or message and we’ll help you secure
+            your preferred date and time.
+          </p>
+        </li>
+        <li class="cs-item">
+          <span class="cs-number">04</span>
+          <h3 class="cs-h3">Confirm & Relax</h3>
+          <p class="cs-item-text">
+            Arrive a few minutes early, settle in, and enjoy your
+            session—focused, restorative care tailored to your goals.
+          </p>
+        </li>
+      </ul>
     </div>
+  </section>
 
+  <!-- how to book -->
+  <section class="">
     <div class="mx-auto max-w-4xl px-6 pb-16">
       <!-- Service Locations -->
       <div class="mt-6 space-y-2">
@@ -484,4 +750,707 @@ const mapNote =
       </div>
     </div>
   </section>
+  
+<style lang="less">
+    /*-- -------------------------- -->
+<---     Services Benefits      -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #services-1666 {
+      padding: var(--sectionPadding);
+      background-color: #f7f7f7;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at small desktop */
+        max-width: (584/16rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 40px - 64px */
+        gap: clamp(2.5rem, 3.9vw, 4rem);
+      }
+
+      .cs-image-group {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        position: relative;
+      }
+
+      .cs-picture {
+        width: 100%;
+        min-height: (328/16rem);
+        display: block;
+        position: relative;
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .cs-floater {
+        width: clamp(20.125rem, 40vw, 28.1875rem);
+        height: clamp(20.1875rem, 40vw, 28.25rem);
+        position: absolute;
+        bottom: (0/16rem);
+        z-index: 1;
+        mix-blend-mode: soft-light;
+      }
+
+      .cs-content {
+        text-align: left;
+        width: 100%;
+        max-width: (650/16rem);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        flex: none;
+      }
+
+      .cs-title {
+        /* 16px - 24px */
+        margin: 0 0 clamp(1rem, 1.96vw, 1.5rem) 0;
+      }
+
+      .cs-text {
+        /* 16px - 24px */
+        margin: 0 0 clamp(1rem, 1.96vw, 1.5rem) 0;
+      }
+
+      .cs-faq-group {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /* 16px - 20px */
+        gap: clamp(1rem, 2.4vw, 1.25rem);
+      }
+
+      .cs-faq-item {
+        list-style: none;
+        width: 100%;
+        background-color: transparent;
+        border: 1px solid #e8e8e8;
+        padding: 0;
+        box-sizing: border-box;
+        transition: border-bottom 0.3s;
+
+        &.active {
+          .cs-indicator {
+            &:before {
+              transform: translate(-50%, -50%) rotate(360deg);
+            }
+
+            &:after {
+              transform: translate(-50%, -50%) rotate(0deg);
+            }
+          }
+
+          .cs-item-p {
+            height: auto;
+            padding-top: (16/16rem);
+            opacity: 1;
+            transform: scaleY(1);
+          }
+        }
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      .cs-button {
+        /* 16px - 20px */
+        font-size: clamp(1rem, 2vw, 1.25rem);
+        line-height: 1.2em;
+        text-align: left;
+        font-weight: bold;
+        width: 100%;
+        padding: (16/16rem) (16/16rem) 0 (16/16rem);
+        border: none;
+        background: transparent;
+        color: var(--headerColor);
+        overflow: hidden;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        /* 16px - 24px */
+        gap: clamp(1rem, 2.5vw, 1.5rem);
+        position: relative;
+        transition:
+          background-color 0.3s,
+          color 0.3s;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      .cs-indicator {
+        width: (24/16rem);
+        height: (24/16rem);
+        position: relative;
+        z-index: 1;
+
+        &:before {
+          /* left line */
+          content: '';
+          width: (16/16rem);
+          height: (2/16rem);
+          background-color: #767676;
+          opacity: 1;
+          border-radius: 2px;
+          position: absolute;
+          display: block;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          transition: transform 0.5s;
+        }
+
+        &:after {
+          /* right line */
+          content: '';
+          width: (16/16rem);
+          height: (2/16rem);
+          background-color: #767676;
+          opacity: 1;
+          border-radius: 2px;
+          position: absolute;
+          display: block;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%) rotate(90deg);
+          transition: transform 0.5s;
+        }
+      }
+
+      .cs-button-text {
+        width: 90%;
+        padding: 0;
+        display: block;
+      }
+
+      .cs-item-p {
+        font-size: (14/16rem);
+        line-height: 1.5em;
+        width: 100%;
+        max-width: none;
+        height: 0;
+        margin: 0;
+        /* 16px - 24px */
+        padding: 0 (16/16rem) (16/16rem) (16/16rem);
+        /* prevents padding and border from affecting height and width */
+        box-sizing: border-box;
+        opacity: 0;
+        color: var(--bodyTextColor);
+        /* clips the text so it doesn't show up */
+        overflow: hidden;
+        position: relative;
+        transition:
+          opacity 0.3s,
+          padding-bottom 0.3s,
+          padding-top 0.3s;
+      }
+
+      .cs-icon {
+        filter: invert(46%) sepia(69%) saturate(461%) hue-rotate(30deg)
+          brightness(89%) contrast(89%);
+        //filter makes the icon's color green
+        width: (32/16rem);
+        height: (32/16rem);
+        display: block;
+      }
+
+      .cs-button-solid {
+        font-size: (16/16rem);
+        font-weight: 700;
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-align: center;
+        text-decoration: none;
+        width: clamp(11.625rem, 23vw, 13.625rem);
+        /* 28px - 40px */
+        margin: clamp(1.75rem, 3.9vw, 2.5rem) 0 0 0;
+        /* prevents padding from affecting height and width */
+        box-sizing: border-box;
+        padding: 0 (24/16rem);
+        color: #fff;
+        background-color: var(--primary);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+
+        &:before {
+          content: '';
+          width: 0%;
+          height: 100%;
+          background: #000;
+          opacity: 1;
+          /* add a border radius below this to round corners */
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: width 0.3s;
+        }
+
+        &:hover:before {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #services-1666 {
+      .cs-picture {
+        height: 100%;
+        min-width: (584/16rem);
+        width: 48vw;
+        right: 0;
+        top: 0;
+      }
+    }
+  }
+
+  /* Small Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #services-1666 {
+      .cs-container {
+        max-width: (1280/16rem);
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+      }
+
+      .cs-content {
+        width: 55%;
+      }
+
+      .cs-image-group {
+        width: 100%;
+        max-width: (542/16rem);
+      }
+
+      .cs-picture {
+        width: 100%;
+        min-width: 100%;
+      }
+
+      .cs-floater {
+        width: (451/16rem);
+        right: clamp(50%, 18vw, 75%);
+        bottom: (-100/16rem);
+      }
+    }
+  }
+
+  /*-- -------------------------- -->
+<---            CTA             -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #cta-697 {
+      padding: 3rem;
+      background-color: var(--primary);
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        max-width: (1280/16rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-title {
+        color: var(--bodyTextColorWhite);
+      }
+
+      .cs-button-solid {
+        font-size: (16/16rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #000;
+        min-width: (150/16rem);
+        padding: 0 (24/16rem);
+        background-color: var(--secondary);
+        border-radius: (4/16rem);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+
+        &:before {
+          content: '';
+          position: absolute;
+          height: 100%;
+          width: 0%;
+          background: #000;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          border-radius: (4/16rem);
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          color: #fff;
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      .cs-background {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        /* makes it act like a background image */
+        object-fit: cover;
+      }
+    }
+  }
+
+  /* Small Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #cta-697 {
+      .cs-content {
+        text-align: left;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  /*-- -------------------------- -->
+<---      Who Can Benefit?      -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #why-choose-1662 {
+      padding: var(--sectionPadding);
+      background-color: #f7f7f7;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+
+      .cs-container {
+        width: 100%;
+        max-width: (1280/16rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 40px - 64px */
+        gap: clamp(2.5rem, 3.9vw, 4rem);
+      }
+
+      .cs-content {
+        text-align: left;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .cs-title {
+        margin: 0;
+        max-width: 23ch;
+      }
+
+      .cs-wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        /* 16px - 32px */
+        gap: clamp(1rem, 3.2vw, 2rem);
+      }
+
+      .cs-card-group {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        /* 16px - 32px */
+        gap: clamp(1rem, 2vw, 2rem);
+      }
+
+      .cs-item {
+        list-style: none;
+        /* prevents padding from affecting height and width */
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: (16/16rem);
+      }
+
+      .cs-item-wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: (8/16rem);
+      }
+
+      .cs-item-number {
+        font-size: (20/16rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        margin: 0;
+        color: var(--primary);
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: (8/16rem);
+      }
+
+      .cs-h3 {
+        font-size: (20/16rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        margin: 0;
+        color: var(--headerColor);
+      }
+
+      .cs-item-text {
+        font-size: (16/16rem);
+        line-height: 1.5em;
+        margin: 0;
+        color: var(--bodyTextColor);
+      }
+
+      .cs-floater {
+        /* 246px - 582px */
+        width: clamp(15.375rem, 50vw, 36.375rem);
+        height: auto;
+        position: absolute;
+        right: (-64/16rem);
+        top: (-8/16rem);
+        z-index: -1;
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #why-choose-1662 {
+      .cs-wrapper {
+        flex-direction: row;
+        align-items: flex-start;
+      }
+    }
+  }
+
+  /*-- -------------------------- -->
+<---           Steps            -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #steps-1675 {
+      padding: var(--sectionPadding);
+      padding-left: 0;
+      padding-right: 0;
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1920px at tablet */
+        max-width: (584/16rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        padding: 0 (16/16rem);
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+      }
+
+      .cs-text {
+        /* Override.  cs-topper cs-title and first cs-text should be removed and put into your global css sheet so it can control every instance of them on your site and is consistent. This selector is a section specific override that stays inside this stitch */
+        max-width: (522/16rem);
+      }
+
+      .cs-card-group {
+        margin: 0;
+        padding: 0;
+        display: grid;
+        justify-items: center;
+        align-items: stretch;
+        grid-auto-flow: row;
+      }
+
+      .cs-item {
+        list-style: none;
+        /* prevents padding and border from affecting height and width */
+        box-sizing: border-box;
+        padding: (24/16rem);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+
+        /* bottom border */
+        &::after {
+          content: '';
+          width: 100%;
+          height: 1px;
+          /* to change the color of the bottom border, adjust the second color (at 50%). the first and third will blend the color to transparent */
+          /* note you'll also have to change the color in the tablet media query when the lines go vertical */
+          background: linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(186, 186, 186, 1) 50%,
+            rgba(255, 255, 255, 0) 100%
+          );
+          opacity: 0.6;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+        }
+
+        &:first-of-type {
+          padding-top: 0;
+        }
+
+        &:last-of-type {
+          padding-bottom: 0;
+
+          &::after {
+            content: none;
+          }
+        }
+      }
+
+      .cs-number {
+        /* 80px - 100px */
+        font-size: clamp(5rem, 1vw, 6.25rem);
+        font-weight: 900;
+        line-height: 1.2em;
+        color: var(--primary);
+        opacity: 0.12;
+        display: block;
+      }
+
+      .cs-h3 {
+        /* 20px - 25px */
+        font-size: clamp(1.25rem, 2vw, 1.5625rem);
+        font-weight: 700;
+        line-height: 1.2em;
+        margin: (-31/16rem) 0 (16/16rem) 0;
+        color: var(--headerColor);
+      }
+
+      .cs-item-text {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 2vw, 1rem);
+        line-height: 1.5em;
+        text-align: left;
+        margin: 0;
+        color: var(--bodyTextColor);
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #steps-1675 {
+      .cs-container {
+        max-width: (1920/16rem);
+      }
+
+      .cs-card-group {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0;
+      }
+
+      .cs-item {
+        /* 24px - 60px */
+        padding: clamp(1.5rem, 3vw, 3.75rem);
+
+        &::after {
+          width: 1px;
+          height: 100%;
+          background: linear-gradient(
+            0deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(186, 186, 186, 1) 50%,
+            rgba(255, 255, 255, 0) 100%
+          );
+          opacity: 0.6;
+          right: 0;
+          left: initial;
+        }
+
+        /* the specificity of the mobile .cs-item means we need to explicitly define the first and last items here, too */
+        &:first-of-type,
+        &:last-of-type {
+          /* 24px - 60px */
+          padding: clamp(1.5rem, 3vw, 3.75rem);
+        }
+      }
+    }
+  }
+</style>
+
 </BaseLayout>
