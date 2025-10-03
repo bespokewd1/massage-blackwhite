@@ -66,7 +66,7 @@ posts.sort(
             </p>
 
             <!-- CTAs -->
-            <div class="mt-8 flex flex-wrap gap-4">
+            <div class="mt-8 flex flex-wrap gap-4 cs-button-solid">
               <a
                 href="#"
                 class="inline-flex items-center justify-center rounded-full border-2 border-emerald-200 bg-emerald-200 px-6 py-3 text-sm font-semibold text-gray-950 transition-colors active:border-transparent hover:bg-emerald-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600"
@@ -153,100 +153,9 @@ posts.sort(
     description="Expert therapeutic massage tailored to your needs."
   />
 
-  <!-- ================= Services ================= -->
-  <section class="bg-orange-50">
-    <!-- Intro -->
-    <div class="mx-auto max-w-6xl px-6 py-16 lg:py-20">
-      <div class="mx-auto max-w-3xl text-center">
-        <h2 class="font-serif text-3xl md:text-4xl text-gray-950">
-          Our Services
-        </h2>
-        <p class="mt-4 text-gray-700 leading-7">
-          From deep tissue and hot stone to relaxing Swedish massage, each
-          session at iMassage Therapeutic Clinique is customized to your
-          goals—reducing pain, improving mobility, and helping you feel your
-          best.
-        </p>
-      </div>
-    </div>
 
-    <!-- Image row with overlay card on orange-200 -->
-    <div class="mx-auto max-w-7xl px-0">
-      <div class="grid grid-cols-1 md:grid-cols-12 items-stretch">
-        <!-- Left image -->
-        <div class="md:col-span-6">
-          <Image
-            src={aboutImage1}
-            alt="lady in a stone massage"
-            class="block aspect-[16/10] w-full object-cover md:aspect-auto md:h-[420px]"
-          />
-        </div>
 
-        <!-- Middle card on orange-200 -->
-        <div
-          class="bg-orange-200 md:col-span-6 flex items-center justify-center px-6 py-10"
-        >
-          <div class="w-full max-w-xl text-center md:text-left">
-            <h3 class="text-gray-900 font-semibold tracking-wide">
-              Therapeutic Deep-Tissue / Relaxation Massage
-            </h3>
-            <p class="mt-4 text-gray-700 leading-7">
-              Target chronic tension and restore ease of movement with focused
-              deep‑tissue work—balanced with soothing relaxation techniques for
-              a calm, refreshed body and mind.
-            </p>
-            <div class="mt-6">
-              <a
-                href="/services"
-                class="inline-flex items-center rounded-full border-2 border-gray-900 px-5 py-2.5 text-sm font-semibold text-gray-900 hover:bg-orange-100 transition"
-              >
-                View Services
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Right image (stretches full width on small, aligns in grid on md+) -->
-        <div class="md:col-span-12">
-          <div class="grid grid-cols-1 md:grid-cols-12">
-            <div class="md:col-span-6 order-2 md:order-1">
-              <div
-                class="bg-orange-200 w-full h-full flex items-center justify-center px-6 py-10"
-              >
-                <div class="w-full max-w-xl text-center md:text-left">
-                  <h3 class="text-gray-900 font-semibold tracking-wide">
-                    Therapeutic Hot Stone Massage
-                  </h3>
-                  <p class="mt-4 text-gray-700 leading-7">
-                    Sink into deeper relaxation with heated basalt stones that
-                    gently melt muscular tension, boost circulation, and promote
-                    overall well‑being.
-                  </p>
-                  <div class="mt-6">
-                    <a
-                      href="/services"
-                      class="inline-flex items-center rounded-full border-2 border-gray-900 px-5 py-2.5 text-sm font-semibold text-gray-900 hover:bg-orange-100 transition"
-                    >
-                      Learn More
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="md:col-span-6 order-1 md:order-2">
-              <Image
-                src={serviceImg5}
-                alt="lady in a stone massage"
-                class="block aspect-[16/10] w-full object-cover md:aspect-auto md:h-[420px]"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================ -->
+<!-- ============================================ -->
 <!--                  Services                    -->
 <!-- ============================================ -->
 
@@ -478,7 +387,52 @@ posts.sort(
   html {
     scroll-behavior: smooth;
   }
+  @media only screen and (min-width: 0rem) {
+    #hero{
+            .cs-button-solid {
+        font-size: (16/16rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #000;
+        min-width: (150/16rem);
+        padding: 0 (24/16rem);
+        background-color: var(--secondary);
+        border-radius: (4/16rem);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
 
+        &:before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 0%;
+            background: #fff;
+            opacity: 1;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            border-radius: (4/16rem);
+            transition: width 0.3s;
+        }
+        
+        &:hover {
+            &:before {
+                width: 100%;
+            }
+        }
+    }
+    }
+
+  }
+
+  
   /*-- -------------------------- -->
 <---          Services          -->
 <--- -------------------------- -*/
