@@ -84,7 +84,7 @@ const orderedTeam = [...owners, ...therapists];
       {
         orderedTeam.map((m) => (
           <article
-            class="rounded-lg bg-orange-200/90 p-6 shadow-sm ring-1 ring-black/5"
+            class="rounded-lg bg-black p-6 shadow-sm ring-1 ring-black/5"
           >
             <!-- Role badge -->
             <div class="mb-3">
@@ -92,8 +92,8 @@ const orderedTeam = [...owners, ...therapists];
                 class:list={[
                   'inline-block rounded-full px-3 py-1 text-xs font-semibold tracking-wide',
                   m.role === 'Owner/Founder RMT'
-                    ? 'bg-emerald-900 text-emerald-50'
-                    : 'bg-emerald-200 text-emerald-900',
+                    ? 'bg-white text-black'
+                    : 'bg-white text-black',
                 ]}
               >
                 {m.role}
