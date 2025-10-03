@@ -393,7 +393,7 @@ posts.sort(
             .cs-button-solid {
         font-size: (16/16rem);
         /* 46px - 56px */
-        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        // line-height: clamp(2.875rem, 5.5vw, 3.5rem);
         text-decoration: none;
         font-weight: 700;
         text-align: center;
@@ -408,6 +408,7 @@ posts.sort(
         z-index: 1;
         /* prevents padding from adding to the width */
         box-sizing: border-box;
+        border: solid 2px #000;
 
         &:before {
             content: "";
@@ -424,6 +425,7 @@ posts.sort(
         }
         
         &:hover {
+          color: #000;
             &:before {
                 width: 100%;
             }
