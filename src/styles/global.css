@@ -7,11 +7,11 @@
 :root {
     /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
     --primary: #0e0e0e;
-    --primaryLight: #3e3e3e;
-    --secondary: #dedede;
-    --secondaryLight: #fefefe;
+    --primaryLight: #2a2a2a;
+    --secondary: #e0e0e0;
+    --secondaryLight: #ffffff;
     --headerColor: #1a1a1a;
-    --bodyTextColor: #4e4b66;
+    --bodyTextColor: #cccccc;
     --bodyTextColorWhite: #fafbfc;
     /* 13px - 16px */
     --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
