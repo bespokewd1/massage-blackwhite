@@ -104,18 +104,18 @@ posts.sort(
     </div>
 
     <!-- second content -->
-    <div class="mx-auto mt-4 grid grid-cols-4 items-stretch gap-0 relative">
+    <!-- <div class="mx-auto mt-4 grid grid-cols-4 items-stretch gap-0 relative"> -->
       <!-- Left: edge-to-edge image -->
-      <div class="relative col-span-5 xl:col-start-2 xl:col-end-4">
+      <!-- <div class="relative col-span-5 xl:col-start-2 xl:col-end-4">
         <Image
           src={aboutImage2}
           class="block aspect-square w-full object-cover lg:h-full mx-auto xl:ms-0 max-w-[600px]"
           alt="lady in a stone massage"
         />
-      </div>
+      </div> -->
 
       <!-- Right: text block on light card -->
-      <div
+      <!-- <div
         class="xl:absolute relative inset-0 col-span-5 xl:col-start-3 xl:col-end-4 flex items-center justify-center md:px-6 py-12"
       >
         <div
@@ -147,7 +147,7 @@ posts.sort(
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
   </section>
 
 <!-- ============================================ -->
@@ -158,10 +158,10 @@ posts.sort(
     <div class="cs-container">
         <!-- Left Content Section-->
         <div class="cs-content">
-            <span class="cs-topper">Featured service</span>
-            <h2 class="cs-title">Creating Elegant Outdoor Living Spaces</h2>
+            <span class="cs-topper">About Us</span>
+            <h2 class="cs-title">Welcome to Massage Therapeutic Clinique</h2>
             <p class="cs-text">
-                Transform your outdoor spaces with our hardscaping services. We design stunning patios, walkways, retaining walls, and outdoor kitchens, combining creativity and expertise to enhance your relaxation and entertainment areas.
+                At Massage Therapeutic Clinique, we focus on restorative, evidence‑based massage care tailored to your body’s needs. From deep tissue and hot stone to relaxation-focused treatments, our goal is to reduce pain, release tension, and renew your overall well‑being.
             </p>
             <!-- <div class="cs-features">
                 <h3 class="cs-h3">Key Features:</h3>
@@ -171,7 +171,7 @@ posts.sort(
                     <li class="cs-li">Seamless integration with your home’s architecture</li>
                 </ul>
             </div> -->
-            <a class="cs-button-solid" aria-label="learn more about our programs" href="">Read More</a>
+            <a class="cs-button-solid" aria-label="learn more about our programs" href="/about">Learn More</a>
         </div>
         <!-- Right Image Section -->
         <div class="cs-image-group">
@@ -185,9 +185,9 @@ posts.sort(
             </div> -->
             <!--Image-->
             <picture class="cs-picture">
-                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction3.jpg">
-                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction3.jpg">
-                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction3.jpg" alt="meeting" width="630" height="630" aria-hidden="true">
+                <source media="(max-width: 600px)" srcset="/assets/images/Services-5.HotStoneMassage.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/Services-5.HotStoneMassage.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/Services-5.HotStoneMassage.jpg" alt="meeting" width="630" height="630" aria-hidden="true">
             </picture>
         </div>
     </div>
@@ -541,6 +541,7 @@ posts.sort(
         }
 
         .cs-h3 {
+            font-family: serif;
             font-size: (16/16rem);
             font-weight: 700;
             line-height: 1.5em;
@@ -733,8 +734,7 @@ posts.sort(
         }
 
         .cs-content {
-            padding-right: (52/16rem);
-            padding-bottom: (108/16rem);
+            padding-bottom: (76/16rem);
         }
 
         .cs-image-group {
