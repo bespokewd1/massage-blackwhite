@@ -131,8 +131,7 @@ const { title, description } = Astro.props;
                 position: absolute;
                 height: 100%;
                 width: 0%;
-                color: #fff !important;
-                background: #000;
+                background: #fff;
                 opacity: 1;
                 top: 0;
                 left: 0;
@@ -140,10 +139,9 @@ const { title, description } = Astro.props;
                 border-radius: (4/16rem);
                 transition: width 0.3s;
             }
-
+            
             &:hover {
                 &:before {
-                  color: #fff !important;
                     width: 100%;
                 }
             }
