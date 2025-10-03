@@ -37,7 +37,70 @@ posts.sort(
   <!-- ============================================ -->
 
   <section id="hero" class="bg-orange-50 px-0">
-    <!-- 1st content -->
+    <div class="mx-auto grid grid-cols-2 items-stretch gap-0">
+      <!-- left: text block on light card -->
+      <div
+        class="relative flex items-center justify-center px-6 py-12 col-span-2 md:col-span-1"
+      >
+        <div class="w-full max-w-xl">
+          <div class="p-8 md:p-10">
+            <!-- Topper (optional) -->
+            <!-- <span class="block text-sm font-semibold tracking-wide text-gray-600">
+              Hot Stone Massage - Edmonton
+            </span> -->
+
+            <!-- Big serif headline -->
+            <h1
+              class="font-serif text-left text-3xl leading-tight text-gray-950 md:text-4xl lg:text-5xl"
+            >
+              Restore, Rejuvenate,
+              <br class="hidden sm:block" />
+              and Feel Your Best
+            </h1>
+
+            <!-- Supporting paragraph -->
+            <p class="mt-6 text-base leading-7 text-gray-700 text-left">
+              Personalized therapeutic massage in Edmonton—deep tissue, Swedish,
+              and hot stone treatments designed to relieve pain, calm the mind,
+              and enhance everyday performance.
+            </p>
+
+            <!-- CTAs -->
+            <div class="mt-8 flex flex-wrap gap-4">
+              <a
+                href="#"
+                class="inline-flex items-center justify-center rounded-full border-2 border-emerald-200 bg-emerald-200 px-6 py-3 text-sm font-semibold text-gray-950 transition-colors active:border-transparent hover:bg-emerald-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600"
+              >
+                Book Appointment
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+            <!-- right: edge-to-edge image -->
+      <div class="relative md:col-span-1 col-span-2">
+        <!-- <Picture
+          src={heroImg}
+          alt="lady in a stone massage"
+          formats={['avif', 'webp']}
+          pictureAttributes={{
+            class:
+              'block aspect-video w-full object-cover lg:h-full lg:min-h-[770px]',
+          }}
+          loading="eager"
+        /> -->
+
+        <Image
+          loading={'eager'}
+          src={heroImg}
+          class="block aspect-video w-full object-cover h-full lg:min-h-[550px]"
+          alt="lady in a stone massage"
+        />
+      </div>
+    </div>
+
+    <!-- second content -->
     <div class="mx-auto mt-4 grid grid-cols-4 items-stretch gap-0 relative">
       <!-- Left: edge-to-edge image -->
       <div class="relative col-span-5 xl:col-start-2 xl:col-end-4">
@@ -76,69 +139,6 @@ posts.sort(
                 class="inline-flex items-center rounded-full border-2 border-gray-900 px-5 py-2.5 text-sm font-semibold text-gray-900 hover:bg-orange-100 transition"
               >
                 Learn More
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-        <div class="mx-auto grid grid-cols-2 items-stretch gap-0">
-      <!-- right: edge-to-edge image -->
-      <div class="relative md:col-span-1 col-span-2">
-        <!-- <Picture
-          src={heroImg}
-          alt="lady in a stone massage"
-          formats={['avif', 'webp']}
-          pictureAttributes={{
-            class:
-              'block aspect-video w-full object-cover lg:h-full lg:min-h-[770px]',
-          }}
-          loading="eager"
-        /> -->
-
-        <Image
-          loading={'eager'}
-          src={heroImg}
-          class="block aspect-video w-full object-cover h-full lg:min-h-[550px]"
-          alt="lady in a stone massage"
-        />
-      </div>
-
-      <!-- Right: text block on light card -->
-      <div
-        class="relative flex items-center justify-center px-6 py-12 col-span-2 md:col-span-1"
-      >
-        <div class="w-full max-w-xl">
-          <div class="p-8 md:p-10">
-            <!-- Topper (optional) -->
-            <!-- <span class="block text-sm font-semibold tracking-wide text-gray-600">
-              Hot Stone Massage - Edmonton
-            </span> -->
-
-            <!-- Big serif headline -->
-            <h1
-              class="font-serif text-left text-3xl leading-tight text-gray-950 md:text-4xl lg:text-5xl"
-            >
-              Restore, Rejuvenate,
-              <br class="hidden sm:block" />
-              and Feel Your Best
-            </h1>
-
-            <!-- Supporting paragraph -->
-            <p class="mt-6 text-base leading-7 text-gray-700 text-left">
-              Personalized therapeutic massage in Edmonton—deep tissue, Swedish,
-              and hot stone treatments designed to relieve pain, calm the mind,
-              and enhance everyday performance.
-            </p>
-
-            <!-- CTAs -->
-            <div class="mt-8 flex flex-wrap gap-4">
-              <a
-                href="#"
-                class="inline-flex items-center justify-center rounded-full border-2 border-emerald-200 bg-emerald-200 px-6 py-3 text-sm font-semibold text-gray-950 transition-colors active:border-transparent hover:bg-emerald-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600"
-              >
-                Book Appointment
               </a>
             </div>
           </div>
