@@ -14,8 +14,32 @@ interface Props {
 
 const { title, description } = Astro.props;
 ---
+<!-- ============================================ -->
+<!--                     CTA                      -->
+<!-- ============================================ -->
 
-<section class="bg-emerald-200/75 text-emerald-900">
+<section id="cta-51">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Contact Us</span>
+            <h2 class="cs-title font-serif">
+              {title}
+            </h2>
+            <p class="cs-text">
+                {description}
+            <a href="/contact" class="cs-button-solid">Contact Us</a>
+        </div>
+    </div>
+    <!-- Background Image-->
+    <picture class="cs-picture">
+        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/CTA/cabinets-m.jpg">
+        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/CTA/cabinets.jpg">
+        <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/CTA/cabinets.jpg" alt="cabinets" width="1920" height="1280" aria-hidden="true">
+    </picture>
+</section>
+                                
+
+<!-- <section class="bg-emerald-200/75 text-emerald-900">
   <div
     class="mx-auto max-w-6xl px-6 py-12 md:py-14 lg:py-16 text-center flex flex-col items-center gap-6"
   >
@@ -32,160 +56,128 @@ const { title, description } = Astro.props;
       Contact Us
     </a>
   </div>
-</section>
-<!-- <section id="cta">
-  <div class="container">
-    <h2 class="title">
-      Relax. Rejuvenate. Restore.
-      <br />
-    </h2>
-    <p>Your Wellness Starts Here – Experience the Benefits of Massage!</p>
-    <a href="/booking" class="cs-button-solid">Book Online</a>
-  </div>
+</section> -->
 
-  <Picture
-    src={ctaBg}
-    alt="stone arrangement with rolled towel"
-    formats={['avif', 'webp']}
-  />
-</section> --><!-- <style lang="less">
-  /* Mobile */
-  @media only screen and (min-width: 0em) {
-    #cta {
-      padding: (50/16rem) 0;
-      position: relative;
+<style lang="less">
+/*-- -------------------------- -->
+<---            CTA             -->
+<--- -------------------------- -*/
 
-      &:before {
-        //content: '';
-        width: 100%;
-        height: 100%;
-        //background: #000;
-        //opacity: 0.7;
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-      }
-
-      .container {
-        text-align: center;
-      }
-
-      .title {
-        font-size: ~'min(9vw, 4rem)';
-        //font-weight: 900;
-        line-height: 58/48;
-        text-align: center;
-        margin-bottom: (36/16rem);
-        color: #fff;
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #cta-51 {
+        padding: var(--sectionPadding);
         position: relative;
-      }
-      .cs-button-solid {
-        color: var(--bodyTextColorWhite);
-        border-radius: calc(32 / 16 * 1rem);
-        &:before {
-          border-radius: calc(32 / 16 * 1rem);
+
+        .cs-container {
+            width: 100%;
+            max-width: (1280/16rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
         }
-      }
 
-      p {
-        text-align: center;
-        width: 96%;
-        max-width: (598/16rem);
-        margin: auto;
-        margin-bottom: (36/16rem);
-        color: #fff;
-        opacity: 1;
-      }
-    }
-  }
-
-  /* Small Desktop */
-  @media only screen and (min-width: 64em) {
-    #cta {
-      padding: (168/16rem) 0;
-    }
-  }
-
-  /* Large Desktop */
-  @media only screen and (min-width: 1300px) {
-    #cta {
-      margin-top: (100/16rem);
-      position: relative;
-      &:before {
-        display: none;
-      }
-      &:after {
-        content: '';
-        width: (2000/16rem);
-        height: (1108/16rem);
-        // background: url('/assets/svgs/cta-squares.svg');
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-        opacity: 1;
-        display: block;
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        z-index: -3;
-        transform: translateX(-50%);
-      }
-      .container {
-        width: 90.0625%;
-        margin: auto;
-      }
-    }
-  }
-
-  /* Dark Mode */
-  @media only screen and (min-width: 0em) {
-    body.dark-mode {
-      #cta {
-        &:after {
-          display: none;
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: center;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: center;
         }
-      }
+
+        .cs-title {
+            color: var(--bodyTextColorWhite);
+        }
+
+        .cs-text {
+            margin-bottom: (16/16rem);
+            color: var(--bodyTextColorWhite);
+            opacity: 0.8;
+            &:last-of-type {
+                margin-bottom: (32/16rem);
+            }
+        }
+
+        .cs-button-solid {
+            font-size: (16/16rem);
+            /* 46px - 56px */
+            line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+            text-decoration: none;
+            font-weight: 700;
+            text-align: center;
+            margin: 0;
+            color: #fff;
+            min-width: (150/16rem);
+            padding: 0 (24/16rem);
+            background-color: var(--primary);
+            border-radius: (4/16rem);
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            /* prevents padding from adding to the width */
+            box-sizing: border-box;
+
+            &:before {
+                content: "";
+                position: absolute;
+                height: 100%;
+                width: 0%;
+                background: #000;
+                opacity: 1;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                border-radius: (4/16rem);
+                transition: width 0.3s;
+            }
+
+            &:hover {
+                &:before {
+                    width: 100%;
+                }
+            }
+        }
+
+        .cs-picture {
+            height: 100%;
+            width: 100%;
+            display: block;
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            z-index: -1;
+
+            &:before {
+                /* black color overlay */
+                content: "";
+                position: absolute;
+                display: block;
+                height: 100%;
+                width: 100%;
+                background: #000;
+                opacity: 0.8;
+                top: 0;
+                left: 0;
+                z-index: 1;
+            }
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
     }
-  }
+}
 
-  picture {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -2;
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-  }
-
-  @media only screen and (min-width: 1300px) {
-    picture {
-      width: 90.0625%;
-      left: 50%;
-      transform: translateX(-50%);
-
-      &:before {
-        //content: '';
-        width: 100%;
-        height: 100%;
-        background: #000;
-        opacity: 0.7;
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 1;
-      }
-    }
-  }
-</style> -->
+                                
+</style>
