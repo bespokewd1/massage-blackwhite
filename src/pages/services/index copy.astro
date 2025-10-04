@@ -204,7 +204,60 @@ const mapNote =
 ---
 
 <BaseLayout preloadedImage={optimizedImage}>
+  <section class="bg-orange-50">
+    <div class="mx-auto max-w-[120rem] px-6 py-16 md:py-20">
+      <!-- Header -->
+      <header class="text-center max-w-3xl mx-auto">
+        <h1 class="font-serif text-3xl md:text-4xl text-gray-900">
+          Our Services
+        </h1>
+        <p class="mt-4 text-gray-700 leading-7">
+          We offer massage therapy for pain relief, stress reduction, and
+          relaxation. Our licensed therapists specialize in deep‑tissue, hot
+          stone, Swedish, cupping, and lymphatic‑focused treatments delivered
+          in‑clinic. Experience attentive care designed to restore balance and
+          well‑being.
+        </p>
+      </header>
 
+      <!-- Cards -->
+      <div
+        class="mt-10 xl:px-16 grid grid-cols-[repeat(auto-fit,minmax(min(450px,100%),1fr))] gap-6 lg:gap-8"
+      >
+        {
+          services.map((s) => (
+            <article class="relative bg-transparent overflow-hidden grid grid-rows-[min-content,1fr] sm:grid-rows-1 sm:grid-cols-2 rounded-xl ring-1 ring-black/10 ">
+              {/* <div class="absolute  inset-0 bg-gradient-to-l from-emerald-900 from-35% via-emerald-900/80 via-55% to-emerald-900/10" /> */}
+              <div class="">
+                <Picture
+                  src={s.img}
+                  alt={s.title}
+                  formats={['avif', 'webp']}
+                  class={'block w-full aspect-square size-full object-cover'}
+                />
+                {/* <div class="absolute inset-0 bg-gradient-to-l from-emerald-900 from-10% via-10% to-emerald-500/10" /> */}
+              </div>
+
+              <div class="p-5 bg-emerald-200 z-10 text-emerald-50 h-full place-content-center space-y-4 ">
+                <h3 class="font-semibold text-shadow-md text-emerald-950 text-xl text-balance">
+                  {s.title}
+                </h3>
+                <p class="text-sm/6 text-emerald-900 text-pretty">{s.blurb}</p>
+                <div class="mt-4">
+                  <a
+                    href={s.href ?? '/services'}
+                    class="inline-flex items-center rounded-full bg-orange-200 hover:bg-orange-100 transition-colors text-gray-900 px-4 py-2 text-sm font-semibold focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300"
+                  >
+                    {s.cta ?? 'Learn More'}
+                  </a>
+                </div>
+              </div>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
 
 <!-- ============================================ -->
 <!--                  Services                    -->
