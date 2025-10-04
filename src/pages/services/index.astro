@@ -259,6 +259,65 @@ const mapNote =
     </div>
   </section>
 
+<!-- ============================================ -->
+<!--                  Services                    -->
+<!-- ============================================ -->
+
+<section id="services-1628">
+    <div class="cs-container">
+        <div class="cs-content">
+            <div class="cs-flex">
+                <span class="cs-topper">Our Services</span>
+                <h2 class="cs-title">Unwind With Our Massage Services</h2>
+            </div>
+            <p class="cs-text">
+                From deep tissue and hot stone to relaxing Swedish massage, each session at iMassage Therapeutic Clinique is customized to your goals—reducing pain, improving mobility, and helping you feel your best.
+            </p>
+        </div>                  
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <a href="/services" class="cs-link">
+                    <picture class="cs-picture">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)" srcset="/assets/images/Services-2.DeepTissueMassage.jpg">
+                        <!--Tablet and above Image-->
+                        <source media="(min-width: 601px)" srcset="/assets/images/Services-2.DeepTissueMassage.jpg">
+                        <img loading="lazy" decoding="async" src="/assets/images/Services-2.DeepTissueMassage.jpg" alt="room" width="413" height="420">
+                    </picture>
+                    <h3 class="cs-h3">Therapeutic Deep-Tissue / Relaxation Massage</h3>
+                    <p class="cs-item-text">
+                        Target chronic tension and restore ease of movement with focused deep‑tissue work—balanced with soothing relaxation techniques for a calm, refreshed body and mind.
+                    </p>
+                    <span class="cs-fake-link">
+                        View Services
+                        <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-chevron-right.svg" alt="" width="20" height="20" loading="lazy" decoding="async" aria-hidden="true">
+                    </span>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="/services" class="cs-link">
+                    <picture class="cs-picture">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)" srcset="/assets/images/stone-massage-background1.png">
+                        <!--Tablet and above Image-->
+                        <source media="(min-width: 601px)" srcset="/assets/images/stone-massage-background1.png">
+                        <img loading="lazy" decoding="async" src="/assets/images/stone-massage-background1.png" alt="room" width="413" height="420">
+                    </picture>
+                    <h3 class="cs-h3">Therapeutic Hot Stone Massage</h3>
+                    <p class="cs-item-text">
+                        Sink into deeper relaxation with heated basalt stones that gently melt muscular tension, boost circulation, and promote overall well‑being.
+                    </p>
+                    <span class="cs-fake-link">
+                        View Services
+                        <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-chevron-right.svg" alt="" width="20" height="20" loading="lazy" decoding="async" aria-hidden="true">
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
+
+
   <!-- ============================================ -->
   <!--            Services Benefits                 -->
   <!-- ============================================ -->
@@ -497,6 +556,7 @@ const mapNote =
       </div>
     </div>
   </section>
+
   <!--            Services Benefits Script                -->
   <script>
     const faqItems = Array.from(document.querySelectorAll('.cs-faq-item'));
@@ -752,6 +812,230 @@ const mapNote =
   </section>
   
 <style lang="less">
+  /*-- -------------------------- -->
+<---          Services          -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #services-1628 {
+        padding: var(--sectionPadding);
+        background-color: #f7f7f7;
+        
+        .cs-container {
+            width: 100%;
+            /* changes to 1280px at tablet */
+            max-width: (550/16em);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: left;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: flex-start;
+        }
+    
+        .cs-title {
+            max-width: 20ch;
+        }
+
+        .cs-text {
+            max-width: (640/16rem);
+            position: relative;
+            z-index: 1;
+
+            &:after {
+                /* divider line */
+                content: "";
+                width: 100%;
+                height: 1px;
+                margin-top: (24/16rem);
+                background: var(--primary);
+                opacity: 1;
+                display: block;
+                position: relative;
+            }
+        }
+
+        .cs-chevron {
+            --chevronColor: var(--primary);
+
+            width: (48/16rem);
+            height: auto;
+        }
+
+        .cs-card-group {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            /* 16px - 20px */
+            column-gap: clamp(1rem, 2.5vw, 1.25rem);
+            /* 28px - 40px */
+            row-gap: clamp(1.75rem, 2.5vw, 2.5rem);
+        }
+        
+        .cs-item {
+            list-style: none;
+            width: 100%;
+            display: flex;
+            grid-column: span 12;
+            flex-direction: column;
+            align-items: flex-start;
+
+            &:hover {
+                .cs-picture {
+                    img {
+                        opacity: .5;
+                        transform: scale(1.2);
+                    }
+                }
+            }
+        }
+
+        .cs-link {
+            text-decoration: none;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .cs-picture {
+            width: 100%;
+            height: (240/16rem);
+            margin-bottom: (24/16rem);
+            background-color: #000;
+            overflow: hidden;
+            display: block;
+            position: relative;
+            border-radius: 3rem 3rem 0 0;
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                transition: transform .6s, opacity .3s;
+            }
+        }
+
+        .cs-h3 {
+            font-size: (20/16rem);
+            line-height: 1.2em;
+            font-weight: 700;
+            text-align: left;
+            margin: 0 0 (12/16rem) 0;
+            color: var(--headerColor);
+        }
+
+        .cs-item-text {
+            font-size: (16/16rem);
+            line-height: 1.5em;
+            text-align: left;
+            margin: 0 0 (24/16rem) 0;
+            color: var(--bodyTextColor);
+        }
+
+        .cs-fake-link {
+            font-size: (16/16rem);
+            line-height: 1.2em;
+            font-weight: 700;
+            margin: 0;
+            margin-top: auto;
+            color: var(--primary);
+            display: inline-flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: (8/16rem);
+
+            &:hover {
+                .cs-icon {
+                    transform: translateX(.5rem);
+                }
+            }
+        }
+
+        .cs-icon {
+            width: (20/16rem);
+            height: auto;
+            display: block;
+            transition: transform .3s;
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #services-1628 {
+        .cs-container {
+            max-width: (1280/16rem);
+        }
+
+        .cs-content {
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cs-flex {
+            text-align: left;
+            width: 40vw;
+            max-width: (640/16rem);
+            flex: none;
+        }
+
+        .cs-title {
+            margin: 0;
+        }
+
+        .cs-text {
+            padding: (12/16rem) 0 (12/16rem) (24/16rem);
+
+            &:after {
+                width: 1px;
+                height: 100%;
+                margin: 0 (24/16rem) 0 0;
+                order: -1;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+        }
+
+        .cs-item {
+            grid-column: span 6;
+        }
+
+        .cs-picture {
+            /* 240px - 420px */
+            height: clamp(15rem, 33vw, 26.25rem);
+        }
+    }
+}
+
+/* Large Desktop - 1300px */
+@media only screen and (min-width: 81.25rem) {
+    #services-1628 {
+        .cs-item {
+            grid-column: span 6;
+        }
+    }
+}
+       
+
     /*-- -------------------------- -->
 <---     Services Benefits      -->
 <--- -------------------------- -*/
